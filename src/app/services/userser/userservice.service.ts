@@ -30,7 +30,7 @@ export class UserserviceService{
     console.log(JSON.stringify(obj));
 
     // this.http.get("http://localhost:8080/hello", {responseType: 'text'}).subscribe(console.log)
-    return this.http.post(`http://13.235.10.115:8085/api/v1/user`, JSON.stringify(obj), httpOptions);
+    return this.http.post(`http://localhost:8085/api/v1/user`, JSON.stringify(obj), httpOptions);
 
   }
 }

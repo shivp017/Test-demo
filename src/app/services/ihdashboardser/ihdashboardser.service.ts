@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class IhdashboardserService {
 
-  private _url : string= 'http://13.235.10.115:8084/serviceprovider';
+  private _url : string= 'http://localhost:3000/IdeasData';
 
   constructor(private http:HttpClient) {
     this.http=http;

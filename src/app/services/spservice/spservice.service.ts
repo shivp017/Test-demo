@@ -8,7 +8,7 @@ import { Register } from 'src/app/register/register.model';
 })
 export class SpserviceService {
 
-  private_url: string = "http://13.235.10.115:8084/api/v1/serviceprovider"
+  private_url: string = "http://localhost:8084/api/v1/serviceprovider"
 
   constructor(private http: HttpClient) { }
 

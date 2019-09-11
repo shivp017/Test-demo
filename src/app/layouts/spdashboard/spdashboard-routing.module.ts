@@ -4,7 +4,6 @@ import { SpprofileComponent } from 'src/app/pages/spprofile/spprofile.component'
 import { SpdashboardcardsComponent } from 'src/app/pages/spdashboardcards/spdashboardcards.component';
 
 export const SpDashboardRoutes: Routes = [
-  {path:'',component:SpdashboardcardsComponent},
   {path:'spdashboardcards',component:SpdashboardcardsComponent},
   {path: 'user-profile', component: SpprofileComponent},
 ];

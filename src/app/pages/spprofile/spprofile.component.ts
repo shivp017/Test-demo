@@ -12,12 +12,11 @@ export class SpprofileComponent implements OnInit {
   updated: any;
   // private dialog: MatDialog
   constructor(private serviceProviderProfile: SpprofileserService) { }
-  public emailId = '';
+  public emailId = "aniketh@gmail.com";
   ngOnInit() {
     this.getTheProfile();
   }
   getTheProfile(){
-    this.emailId=localStorage.getItem("emailId");
     this.serviceProviderProfile.getByEmailIdForServiceProvider(this.emailId)
     .subscribe((data)=> {
       console.log("data fetched..", data);

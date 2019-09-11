@@ -4,7 +4,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
 import { SectionsComponent } from './sections.component';
 import {RouterModule} from '@angular/router';
-import { MDBBootstrapModule} from 'angular-bootstrap-md';
+
 
 @NgModule({
   declarations: [SectionsComponent],
@@ -12,9 +12,8 @@ import { MDBBootstrapModule} from 'angular-bootstrap-md';
     CommonModule,
     NgbModule,
     FormsModule,
-    RouterModule,
-    MDBBootstrapModule
+    RouterModule
   ],
-  exports: [SectionsComponent]
+  exports:[SectionsComponent]
 })
 export class SectionsModule { }

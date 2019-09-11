@@ -4,11 +4,13 @@ import { IhdashboardcardsComponent } from 'src/app/pages/ihdashboardcards/ihdash
 import { IhprofileComponent } from 'src/app/pages/ihprofile/ihprofile.component';
 import { PostideaComponent } from 'src/app/pages/postidea/postidea.component';
 
+
 export const IhDashboardRoutes: Routes = [
   {path: '', component: IhdashboardcardsComponent},
   {path: 'ihdashboardcards', component: IhdashboardcardsComponent},
   {path: 'user-profile', component: IhprofileComponent},
-  {path: 'postanidea', component: PostideaComponent}
+  {path: 'postanidea', component: PostideaComponent},
+
 ];
 
 

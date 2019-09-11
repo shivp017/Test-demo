@@ -63,7 +63,6 @@ constructor(private registerser: RegisterserService, private userservice: Userse
 Login() {
     this.userservice.Login (this.email, this.password).subscribe((response) => {
       if (response) {
-        localStorage.setItem("emailId",this.email);
         this.token = response;
         console.log(this.getDecodedAccessToken(this.token.token));
         this.decodedroletoken = this.getDecodedAccessToken(this.token.token);
@@ -82,7 +81,14 @@ Login() {
     console.log(err);
 });
 
+if (this.decodedTokenWithRoleSub === "ideaHamster") {
+  // console.log('ideahamster');
+  this.router.navigate(['/spdashboard']);
+}
+ else {
 
+ this.router.navigate(['/ihdashboard']);
+}
 
 }
 }

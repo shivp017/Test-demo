@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 declare interface RouteInfo {
   path: string;
   title: string;
@@ -9,10 +10,11 @@ declare interface RouteInfo {
 }
 
 export const ROUTES: RouteInfo[] = [
-  { path: 'spdashboardcards', title: 'Dashboard',  icon: 'ni-tv-2 text-primary', class: '' },
+  { path: 'ihdashboardcards', title: 'Dashboard',  icon: 'ni-tv-2 text-primary', class: '' },
   { path: 'user-profile', title: 'User profile',  icon:'ni-single-02 text-yellow', class: '' },
-  {path:'view idea',title:'viewidea',icon:'',class:''}
+  { path:'/chat',title:'chat',icon:'',class:''}
 ];
+
 
 @Component({
   selector: 'app-spsidebar',

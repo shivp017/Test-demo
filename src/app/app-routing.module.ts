@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { RegisterspComponent } from './registersp/registersp.component';
 import { SpdashboardComponent } from './layouts/spdashboard/spdashboard.component';
 
+
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
@@ -20,11 +21,16 @@ const routes: Routes = [
     {
      path: '',
      loadChildren: './layouts/ihdashboard/ihdashboard.module#IhdashboardModule'
-   }
+   },
  ]
 },
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'spdashboard',
+{
+  path: '', 
+  redirectTo: 'home', 
+  pathMatch: 'full'
+},
+{
+  path: 'spdashboard',
   component: SpdashboardComponent,
   children: [
     {
@@ -32,10 +38,16 @@ const routes: Routes = [
      loadChildren: './layouts/spdashboard/spdashboard.module#SpdashboardModule'
    }
  ]
+},
+{
+  path: 'chat',
+  loadChildren: () => import('./videochat/videochat.module').then(mod => mod.VideochatModule)
 }
 ];
 
 @NgModule({
+  declarations: [
+  ],
   imports: [
     CommonModule,
     BrowserModule,

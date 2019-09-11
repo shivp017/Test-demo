@@ -12,13 +12,11 @@ export class IhprofileComponent implements OnInit {
   public ideaHamsterData: IhprofileserService;
   updated: any;
   constructor(private ihprofileserviceService: IhprofileserService ) { }
-  public emailId = '';
+  public emailId = "shiv@gmail.com";
   ngOnInit() {
-
     this.getTheProfile();
   }
   getTheProfile(){
-    this.emailId =localStorage.getItem("emailId");
     this.ihprofileserviceService.getByEmailIdForIdeaHamster(this.emailId).subscribe((data:any)=>{
       console.log("data fetched.."+ data);
       this.ideaHamsterData=data;

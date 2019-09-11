@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Register } from '../register/register.model';
-import { SpprofileserService } from '../services/spprofileser/spprofileser.service';
+import { SpserviceService } from '../services/spservice/spservice.service';
 
 @Component({
   selector: 'app-registersp',
@@ -13,16 +13,14 @@ export class RegisterspComponent implements OnInit {
   registerForm:FormGroup;
   submitted=false;
   user:Register=new Register();
-
   
-  constructor(private spservice:SpprofileserService) { }
+  constructor(private spservice:SpserviceService) { }
 
   ngOnInit() {
   }
 
   getf(){return this.registerForm.controls;}
   saveDetails(){
-    this.user.role='serviceprovider';
     this.spservice.createUser(this.user)
     .subscribe(data=>{
       console.log(data);

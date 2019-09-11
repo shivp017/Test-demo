@@ -28,7 +28,6 @@ import { SpprofileserService } from './services/spprofileser/spprofileser.servic
 import { RegisterserService } from './services/registerser/registerser.service';
 import { RegisterspComponent } from './registersp/registersp.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,4 +58,17 @@ import { RegisterspComponent } from './registersp/registersp.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule {
+
+  // constructor(private injector: Injector) {
+  //   const strategyFactory = new ElementZoneStrategyFactory(WebComponentComponent, this.injector);
+  //   const element = createCustomElement(WebComponentComponent, { injector: this.injector, strategyFactory });
+  //   customElements.define('openvidu-webcomponent', element);
+  // }
+ }
+ 
+// export class ChatModule { 
+//   const strategyFactory = new ElementZoneStrategyFactory(WebComponentComponent, this.injector);
+//   const element = createCustomElement(WebComponentComponent, { injector: this.injector, strategyFactory });
+//   cu
